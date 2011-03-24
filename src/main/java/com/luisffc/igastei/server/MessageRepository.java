@@ -6,15 +6,15 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.jdo.Extent;
-import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 
 import com.luisffc.igastei.model.Message;
+import com.luisffc.igastei.server.repository.helper.ConnectionFactory;
 
 public class MessageRepository {
 
-	PersistenceManagerFactory pmfInstance = JDOHelper.getPersistenceManagerFactory("transactions-optional");
+	PersistenceManagerFactory pmfInstance = new ConnectionFactory().getPmfInstance();
 
 	public Collection<Message> getAll() {
 		PersistenceManager pm = pmfInstance.getPersistenceManager();
