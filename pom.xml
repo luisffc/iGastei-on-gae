@@ -18,6 +18,13 @@
       <artifactId>gae-runtime</artifactId>
       <version>${gae.version}</version>
       <type>pom</type>
+	  <exclusions>
+		<exclusion>
+			<groupId>com.google.appengine.orm</groupId>
+			<artifactId>datanucleus-core</artifactId>
+		</exclusion>
+	  </exclusions>
+
     </dependency>
 
 		<dependency>
@@ -25,6 +32,12 @@
             <artifactId>datanucleus-core</artifactId>
             <version>${datanucleus.version}</version>
             <scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.transaction</groupId>
+					<artifactId>transaction-api</artifactId>
+				</exclusion>
+			</exclusions>
         </dependency>
     
 		<dependency>
