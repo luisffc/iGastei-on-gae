@@ -1,0 +1,45 @@
+
+========================
+Enderecos da aplicacao:
+========================
+
+Tela html = http://localhost:9090/
+
+URL REST = http://localhost:9090/api/itensFatura
+
+* Trabalha apenas com XML, por enquanto
+
+
+========================
+Instrucoes para rodar:
+========================
+
+- Instale o maven e teste para ver se esta rodando certo
+
+- Entre na pasta do projeto.
+
+- Baixe o SDK do GAE no maven:
+mvn gae:unpack
+
+- Rode a aplicacao
+mvn gae:run
+
+Pronto! Jah deve estar rodando :D
+
+
+========================
+Instrucoes para editar no eclipse:
+========================
+
+- Rode o comando para criar compatibilidade com o eclipse
+mvn eclipse:eclipse -DdownloadJavadocs=true
+
+- Importe o projeto no eclipse
+
+
+---------------------------
+Links uteis:
+http://code.google.com/p/maven-gae-plugin/
+http://www.kindleit.net/maven_gae_plugin/
+http://stackoverflow.com/questions/877949/problem-using-datanucleus-enhancer-in-a-maven-google-app-engine-project
+http://hamandeggs.wordpress.com/2010/01/26/how-to-gae-eclipse-maven/
