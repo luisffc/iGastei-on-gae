@@ -12,12 +12,24 @@
         </servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>ItemFaturaServlet</servlet-name>
+        <servlet-class>
+            com.luisffc.igastei.web.ItemFaturaServlet
+        </servlet-class>
+    </servlet>
+    
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>ItemFaturaServlet</servlet-name>
+        <url-pattern>/compras-cartao</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
-        <welcome-file>index</welcome-file>
+        <welcome-file>compras-cartao</welcome-file>
     </welcome-file-list>
 </web-app>
