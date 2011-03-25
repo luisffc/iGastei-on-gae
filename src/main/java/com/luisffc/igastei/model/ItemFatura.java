@@ -8,7 +8,9 @@ import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class ItemFatura implements Serializable {
 	
