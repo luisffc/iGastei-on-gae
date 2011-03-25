@@ -41,10 +41,13 @@
 	
 	<form action="compras-cartao" method="post">
 		<input type="hidden" name="action" value="create" />
-		<input type="text" name="cartao" />
-		<input type="text" name="descOperadora" />
-		<input type="text" name="valorOperadora" />
-		<input type="submit" value="Create" />
+		<p>cartao</p>
+		<input type="text" name="cartao" /><br />
+		<p>descOperadora</p>
+		<input type="text" name="descOperadora" /><br />
+		<p>valorOperadora</p>
+		<input type="text" name="valorOperadora" /> (Numero)<br />
+		<input type="submit" value="Create" /><br />
 	</form>
 	
 </body>
