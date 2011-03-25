@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.jdo.Extent;
+import javax.jdo.JDOObjectNotFoundException;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 
@@ -31,7 +32,18 @@ public class ItemFaturaRepository {
 		}
 	}
 	
-	public void create(ItemFatura itemFatura) {
+	public ItemFatura getById(Long id){
+		PersistenceManager pm = pmfInstance.getPersistenceManager();
+		try {
+			return pm.getObjectById(ItemFatura.class, id);
+		}catch (JDOObjectNotFoundException e){
+			return null;
+		} finally {
+			pm.close();
+		}
+	}
+	
+	public void save(ItemFatura itemFatura) {
 		PersistenceManager pm = pmfInstance.getPersistenceManager();
 		try {
 		    pm.makePersistent(itemFatura);

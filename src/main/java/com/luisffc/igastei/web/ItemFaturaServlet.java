@@ -60,7 +60,7 @@ public class ItemFaturaServlet extends HttpServlet {
 		item.setCartao(req.getParameter("cartao"));
 		item.setDescOperadora(req.getParameter("descOperadora"));
 		item.setValorOperadora(Double.parseDouble(req.getParameter("valorOperadora")));
-		itemFaturaRepository.create(item);
+		itemFaturaRepository.save(item);
 	}
 
 	private void update(HttpServletRequest req){
